@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 body {
-    background-color: #e4f6f8;
+    background: linear-gradient(to bottom right, #ffe6ee, #cfeefa);
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     overflow: hidden;
 }
-
+/*#e4f6f8*/
 .clock {
     background-color: white;
     width: 450px;
@@ -48,7 +48,6 @@ body {
     border-top-right-radius: 10px;
     transform-origin: bottom;
     z-index: 9;
-    transform:translateX(-50%) rotate(calc(var(--rotation)*1deg))
 }
 
 .clock .hand.seconds{
