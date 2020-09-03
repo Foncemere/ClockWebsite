@@ -2,12 +2,77 @@
 body {
     background: linear-gradient(to bottom right, #ffe6ee, #cfeefa);
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     min-height: 100vh;
     overflow: hidden;
 }
-/*#e4f6f8*/
+
+.timezoneSelection{
+    margin: 0px;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+}
+
+.timezoneSelection button {
+    background: none;
+    border: none;
+    font-family: 'Lato', sans-serif;
+    font-size: 30px;
+    cursor: pointer;
+    text-decoration: none;
+    width: 100%;
+    height: 100px;
+}
+
+.timezoneSelection button:hover{
+    color: white;
+}
+
+.timezoneSelection li{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.timezoneSelection li:hover{
+    background-color: black;
+}
+
+.timezoneSelection ul{
+    padding: 0px;
+    background: white;
+    width: 350px;
+    height: 250px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 5px;
+    list-style-type: none;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+}
+.timezoneSelection li button {
+    background: none;
+    border: none;
+    font-family: 'Lato', sans-serif;
+    font-size: 25px;
+    cursor: pointer;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+}
+.timezoneSelection li button:hover {
+    background: gray;
+    border: none;
+
+}
+
 .clock {
     background-color: white;
     width: 450px;
@@ -17,7 +82,7 @@ body {
     position: relative;
     font-size: 30px;
     font-family: 'Lato', sans-serif;
-    box-shadow: inset 0 0 0, 
+    box-shadow: inset 0 0 0,
                 0 20px 20px rgba(0, 0, 0, .2);
 }
 
@@ -25,6 +90,7 @@ body {
     content: '';
     position: absolute;
     background-color: black;
+    border: 1px solid white;
     z-index: 11;
     width: 10px;
     height: 10px;
@@ -55,6 +121,7 @@ body {
     height:47%;
     background-color: red;
     z-index: 10;
+
 }
 .clock .hand.minutes{
     width:7px;
@@ -99,3 +166,24 @@ body {
 #number11{ rotate: 330deg;}
 #number11 div {rotate: -330deg;}
 
+/* .timezoneSelection button:focus + ul{
+    opacity:0.8;
+    pointer-events: all;
+    transform: translateY(0px)
+} */
+
+.digitalTime{
+    color: black;
+    font-family: 'Lato', sans-serif;
+    font-size: 40px;
+}
+
+.clockFormat li{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px;
+    list-style: none;
+    justify-content: center;
+}
