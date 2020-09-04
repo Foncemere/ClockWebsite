@@ -1,15 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 body {
-    background: linear-gradient(to bottom right, #ffe6ee, #cfeefa);
+    /* background: linear-gradient(to bottom right, #ffe6ee, #cfeefa); */
     display: flex;
     justify-content: space-around;
     align-items: center;
     min-height: 100vh;
     overflow: hidden;
+
 }
 
 .timezoneSelection{
-    margin: 0px;
+    margin-top: 100px;
     color: white;
     font-family: 'Lato', sans-serif;
     text-align: center;
@@ -24,6 +25,7 @@ body {
     text-decoration: none;
     width: 100%;
     height: 100px;
+
 }
 
 .timezoneSelection button:hover{
@@ -143,34 +145,29 @@ body {
     color: black;
 }
 
-#number1{ rotate: 30deg;}
-#number1 div {rotate: -30deg;}
-#number2{ rotate: 60deg;}
-#number2 div {rotate: -60deg;}
-#number3{ rotate: 90deg;}
-#number3 div {rotate: -90deg;}
-#number4{ rotate: 120deg;}
-#number4 div {rotate: -120deg;}
-#number5{ rotate: 150deg;}
-#number5 div {rotate: -150deg;}
-#number6{ rotate: 180deg;}
-#number6 div {rotate: -180deg;}
-#number7{ rotate: 210deg;}
-#number7 div {rotate: -210deg;}
-#number8{ rotate: 240deg;}
-#number8 div {rotate: -240deg;}
-#number9{ rotate: 270deg;}
-#number9 div {rotate: -270deg;}
-#number10{ rotate: 300deg;}
-#number10 div {rotate: -300deg;}
-#number11{ rotate: 330deg;}
-#number11 div {rotate: -330deg;}
+#number1{ transform: rotate(30deg);}
+#number1 div {transform: rotate(-30deg);}
+#number2{ transform: rotate(60deg);}
+#number2 div {transform: rotate(-60deg);}
+#number3{ transform: rotate(90deg);}
+#number3 div {transform: rotate(-90deg);}
+#number4{ transform: rotate(120deg);}
+#number4 div {transform: rotate(-120deg);}
+#number5{transform: rotate(150deg);}
+#number5 div {transform: rotate(-150deg);}
+#number6{ transform: rotate(180deg);}
+#number6 div {transform: rotate(-180deg);}
+#number7{ transform: rotate(210deg);}
+#number7 div {transform: rotate(-210deg);}
+#number8{ transform: rotate(240deg);}
+#number8 div {transform: rotate(-240deg);}
+#number9{ transform: rotate(270deg);}
+#number9 div {transform: rotate(-270deg);}
+#number10{ transform: rotate(300deg);}
+#number10 div {transform: rotate(-300deg);}
+#number11{ transform: rotate(330deg);}
+#number11 div {transform: rotate(-330deg);}
 
-/* .timezoneSelection button:focus + ul{
-    opacity:0.8;
-    pointer-events: all;
-    transform: translateY(0px)
-} */
 
 .digitalTime{
     color: black;
@@ -183,7 +180,7 @@ body {
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
-    padding: 50px;
+    padding: 40px;
     list-style: none;
     justify-content: center;
 }
