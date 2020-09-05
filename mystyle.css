@@ -1,25 +1,51 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 body {
-    /* background: linear-gradient(to bottom right, #ffe6ee, #cfeefa); */
     display: flex;
+    margin: 0%;
     justify-content: space-around;
     align-items: center;
     min-height: 100vh;
     overflow: hidden;
-
+}
+/* start of background color css */
+.background {
+    background-image: linear-gradient(to bottom right, #ffe6ee, #cfeefa);
+    transition: opacity 1s linear;
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 }
 
+.background::before{
+    content: "";
+    background-image: linear-gradient(to top left, #3d1c51, #000033);
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: opacity 1s linear;
+    z-index: -1;
+}
+.background.trigger::before {
+    opacity: 1;
+
+  }
+/* end of background color css */
+
 .timezoneSelection{
-    margin-top: 100px;
+    margin-top: 220px;
     color: white;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     text-align: center;
+
 }
 
 .timezoneSelection button {
     background: none;
     border: none;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 30px;
     cursor: pointer;
     text-decoration: none;
@@ -40,20 +66,17 @@ body {
     align-items: center;
 }
 
-.timezoneSelection li:hover{
-    background-color: black;
-}
 
 .timezoneSelection ul{
     padding: 0px;
     background: white;
     width: 350px;
-    height: 250px;
+    height: 350px;
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
-    border-radius: 5px;
+    border-radius: 15px;
     list-style-type: none;
     justify-content: center;
     opacity: 0;
@@ -62,7 +85,7 @@ body {
 .timezoneSelection li button {
     background: none;
     border: none;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 25px;
     cursor: pointer;
     text-decoration: none;
@@ -72,6 +95,8 @@ body {
 .timezoneSelection li button:hover {
     background: gray;
     border: none;
+    border-radius: 15px;
+
 
 }
 
@@ -83,7 +108,7 @@ body {
     border: solid white 17px;
     position: relative;
     font-size: 30px;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     box-shadow: inset 0 0 0,
                 0 20px 20px rgba(0, 0, 0, .2);
 }
@@ -171,7 +196,7 @@ body {
 
 .digitalTime{
     color: black;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 40px;
 }
 

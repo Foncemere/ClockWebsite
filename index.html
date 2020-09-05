@@ -3,13 +3,15 @@
     <link rel="stylesheet" type="text/css" href="mystyle.css">
 </head>
 
-<body>
+<body class = "background trigger">
         <div class = "timeZoneSelection"> 
-            <button onfocus="showTab()">TimeZones</button>
+            <button onfocus="showTab()">[TIMEZONE]</button>
             <ul>
-                <li><button onclick="startClock('pinoy'), closeTab()">Manila, Philippines</button></li>
-                <li><button onclick="startClock('murica'), closeTab()">New York City, USA</button></li>
-                <li><button onclick="startClock('tea'), closeTab()">London, UK</button></li>
+                <li><button onclick="startClock('manila'), closeTab()">Manila, Philippines</button></li>
+                <li><button onclick="startClock('nyc'), closeTab()">New York City, USA</button></li>
+                <li><button onclick="startClock('london'), closeTab()">London, UK</button></li>
+                <li><button onclick="startClock('cali'), closeTab()">Los Angeles, USA</button></li>
+                <li><button onclick="startClock('mumbai'), closeTab()">Mumbai, India</button></li>
             </ul>
         </div>
         <div class = "clockFormat">

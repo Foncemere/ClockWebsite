@@ -6,9 +6,10 @@ const clockNumbers = document.querySelectorAll(".clock .numbers")
 const timeZoneButton = document.querySelector(".timezoneSelection ul")
 const digital = document.querySelector(".digitalTime")
 const timeZoneSign = document.querySelector(".timezoneSelection button")
+const bgTrigger = document.querySelector(".background")
 
-let startingTime = setInterval(selector, 1000) //Analog
-let startingDisplay = setInterval(displayDigitalTime, 1000) //Digital
+let startingTime = setInterval(selector, 1000) //start of Analog clock code
+let startingDisplay = setInterval(displayDigitalTime, 1000) //start of Digital clock
 
 function startClock(place){     //starting clock
     clearInterval(startingTime);
@@ -24,17 +25,25 @@ function selector(timeZoneSelected){    //The entire clock selector and operator
     let offset;
     let place;
     switch(timeZoneSelected){
-        case 'murica':
+        case 'nyc':
             offset = -4;
             place = 'New York City'
             break;
-        case 'pinoy':
+        case 'manila':
             offset = 8;
             place = 'City of Manila'
             break;
-        case 'tea':
+        case 'london':
             offset = 1;
             place = 'London'
+            break;
+        case 'cali':
+            offset = -7;
+            place = 'Los Angeles'
+            break;  
+        case 'mumbai':
+            offset = 5.5;
+            place = 'Mumbai'
             break;
         default:
             offset = 8;
@@ -63,7 +72,7 @@ function selector(timeZoneSelected){    //The entire clock selector and operator
 }
 
 function dayTime(){     // day time detection
-    document.body.style.backgroundImage = 'linear-gradient(to bottom right, #ffe6ee, #cfeefa)';
+    //document.body.style.backgroundImage = 'linear-gradient(to bottom right, #ffe6ee, #cfeefa)';
     clock.style.background = 'white';
     clock.style.border = 'solid white 17px';
     secondHand.style.border = '1px solid white';
@@ -72,11 +81,11 @@ function dayTime(){     // day time detection
     }
     digital.style.color = 'black';
     timeZoneSign.style.color = 'black';
-    
+    bgTrigger.classList.toggle("trigger", false)
 }
 
 function nightTime(){      //night time detection
-    document.body.style.backgroundImage = 'linear-gradient(to top left, #3d1c51, #000033)';
+    //document.body.style.backgroundImage = 'linear-gradient(to top left, #3d1c51, #000033)';
     clock.style.background = 'black';
     clock.style.border = 'solid black 17px';
     secondHand.style.border = '1px solid black'
@@ -85,6 +94,7 @@ function nightTime(){      //night time detection
     }
     digital.style.color = 'white';
     timeZoneSign.style.color = 'white';
+    bgTrigger.classList.toggle("trigger", true)
 }
 
 function setRotation(element, rotationRatio){  //set the rotation of the hands
@@ -99,13 +109,13 @@ function showTab(){     //when clicked, will open the possible timezones
     timeZoneButton.style.opacity = "0.8";
     timeZoneButton.style.pointerEvents = "all";
     timeZoneButton.style.transform = "translateY(0px)";
-    timeZoneButton.style.transition = "0.5s linear";
+    timeZoneButton.style.transition = "1s ease";
 }
 
 function closeTab(){
     timeZoneButton.style.opacity = "0";
     timeZoneButton.style.pointerEvents = "none";
     timeZoneButton.style.transform = "translateY(-10px)";
-    timeZoneButton.style.transition = "0.5s linear";
+    timeZoneButton.style.transition = "1s ease";
 }
 selector();
