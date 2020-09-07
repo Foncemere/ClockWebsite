@@ -5,6 +5,7 @@ const clock = document.querySelector(".clock")
 const clockNumbers = document.querySelectorAll(".clock .numbers")
 const timeZoneButton = document.querySelector(".timezoneSelection ul")
 const digital = document.querySelector(".digitalTime")
+const locationSelected = document.querySelector(".location")
 const timeZoneSign = document.querySelector(".timezoneSelection button")
 const bgTrigger = document.querySelector(".background")
 
@@ -37,13 +38,57 @@ function selector(timeZoneSelected){    //The entire clock selector and operator
             offset = 1;
             place = 'London'
             break;
-        case 'cali':
+        case 'la':
             offset = -7;
-            place = 'Los Angeles'
+            place = 'City of Los Angeles'
             break;  
         case 'mumbai':
             offset = 5.5;
             place = 'Mumbai'
+            break;
+        case 'cape':
+            offset = 2;
+            place = 'Cape Town'
+            break;
+        case 'edmon':
+            offset = -6;
+            place = 'Edmonton'
+            break;
+        case 'moscow':
+            offset = 3;
+            place = 'Moscow'
+            break;
+        case 'tokyo':
+            offset = 9;
+            place = 'Tokyo Metropolis'
+            break;
+        case 'rio':
+            offset = -3;
+            place = 'Rio de Janeiro'
+            break;
+        case 'dubai':
+            offset = 4;
+            place = 'Dubai'
+            break;
+        case 'madrid':
+            offset = 0;
+            place = 'Madrid'
+            break;
+        case 'mel':
+            offset = 10;
+            place = 'Melbourne'
+            break;
+        case 'bk':
+            offset = 7;
+            place = 'Bangkok'
+            break;
+        case 'cope':
+            offset = 2;
+            place = 'Copenhagen'
+            break;
+        case 'stock':
+            offset = 2;
+            place = 'Stockholm'
             break;
         default:
             offset = 8;
@@ -80,6 +125,7 @@ function dayTime(){     // day time detection
         clockNumbers[i].style.color = 'black';
     }
     digital.style.color = 'black';
+    locationSelected.style.color = 'black';
     timeZoneSign.style.color = 'black';
     bgTrigger.classList.toggle("trigger", false)
 }
@@ -93,6 +139,7 @@ function nightTime(){      //night time detection
         clockNumbers[i].style.color = 'white';
     }
     digital.style.color = 'white';
+    locationSelected.style.color = 'white';
     timeZoneSign.style.color = 'white';
     bgTrigger.classList.toggle("trigger", true)
 }
@@ -101,7 +148,8 @@ function setRotation(element, rotationRatio){  //set the rotation of the hands
     element.style.transform = "translateX(-50%) rotate(" + rotationRatio*360 + "deg)"
 }
 function displayDigitalTime(timeGiven = new Date(), place = 'City of Manila'){    //displays the digital clock
-    document.querySelector(".digitalTime").innerHTML = place + "<br>" + timeGiven.toLocaleTimeString();
+    document.querySelector(".location").innerHTML = place;
+    document.querySelector(".digitalTime").innerHTML = timeGiven.toLocaleTimeString();
 
 }
 

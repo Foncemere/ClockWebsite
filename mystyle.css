@@ -11,7 +11,7 @@ body {
 /* start of background color css */
 .background {
     background-image: linear-gradient(to bottom right, #ffe6ee, #cfeefa);
-    transition: opacity 1s linear;
+    transition: opacity 0.5s linear;
     opacity: 1;
     width: 100%;
     height: 100%;
@@ -25,7 +25,7 @@ body {
     width: 100%;
     height: 100%;
     position: absolute;
-    transition: opacity 1s linear;
+    transition: opacity 0.5s linear;
     z-index: -1;
 }
 .background.trigger::before {
@@ -39,7 +39,6 @@ body {
     color: white;
     font-family: 'Montserrat', sans-serif;
     text-align: center;
-
 }
 
 .timezoneSelection button {
@@ -61,26 +60,22 @@ body {
 .timezoneSelection li{
     width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 
 .timezoneSelection ul{
     padding: 0px;
     background: white;
-    width: 350px;
+    overflow-y: scroll;
+    opacity: 0;
+    pointer-events: none;
+    width: 350px; 
     height: 350px;
     display: flex;
-    justify-content: space-around;
     align-items: center;
     flex-direction: column;
     border-radius: 15px;
     list-style-type: none;
-    justify-content: center;
-    opacity: 0;
-    pointer-events: none;
 }
 .timezoneSelection li button {
     background: none;
@@ -90,12 +85,13 @@ body {
     cursor: pointer;
     text-decoration: none;
     width: 100%;
-    height: 100%;
+    height: 70px;
 }
 .timezoneSelection li button:hover {
     background: gray;
     border: none;
-    border-radius: 15px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
 
 
 }
@@ -195,6 +191,11 @@ body {
 
 
 .digitalTime{
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+}
+.location{
     color: black;
     font-family: 'Montserrat', sans-serif;
     font-size: 40px;
